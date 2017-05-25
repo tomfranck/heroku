@@ -223,6 +223,8 @@ a.control_next {
 footer {
   margin-top:20px;
   text-align:center;
+  font-weight:bold;
+  border: 1px solid black;
 }
 
 .categorieenvakjes {
