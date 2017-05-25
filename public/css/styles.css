@@ -228,6 +228,10 @@ footer {
   padding: 20px;
 }
 
+footer a {
+  font-size: 12px;
+}
+
 .categorieenvakjes {
   border: 1px solid black;
   font-size: 15px;
