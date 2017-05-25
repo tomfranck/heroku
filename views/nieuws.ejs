@@ -1,0 +1,52 @@
+<a href="/"><% include header %></a>
+
+		<div class="topbalk">
+      <a href="/">Home</a>
+		  <a href="/">Photos</a>
+		  <a href="/">Trends</a>
+		  <a href="/">Street Style</a>
+			<a href="/">Contact</a>
+
+		</div>
+
+    <br/>
+
+<h1><a href="/">&larr; Return to homepage</a></h1>
+<section>
+
+    <h2>
+      <%- item.titel %>
+    </h2>
+
+		<p>
+			<% for (var i = 0; i < item.auteurs.length; i++) { %>
+				<a class="auteursvakje" href="/auteurs/<%- i %>"><%- item.auteurs[i] %></a><% if (i+1< item.auteurs.length){ %> <% } %>
+			<% } %>
+		</p>
+
+    <img src="/img/<%- item.afbeeldingl %>" alt="<%- item.titel %>">
+
+    <p><%- item.datum %></p>
+
+    <p>
+      <%- item.body %>
+    </p>
+
+<img src="/img/<%- item.afbeeldingextra %>" alt="<%- item.titel %>">
+
+    <p>Seen in:
+
+      <% for (var i = 0; i < item.categorieen.length; i++) { %>
+        <a class="categorieenvakjes" href="/categorieen/<%- i %>"><%- item.categorieen[i] %></a><% if (i+1< item.categorieen.length){ %> <% } %>
+      <% } %>
+    </p>
+
+    <p>Related tags:
+
+      <% for (var x = 0; x < item.tags.length; x++) { %>
+        <a class="categorieenvakjes" href="/tags/<%- x %>"><%- item.tags[x] %></a><% if (x+1< item.tags.length){ %> <% } %>
+      <% } %>
+    </p>
+</section>
+
+<% include footer %>

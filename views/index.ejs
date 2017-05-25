@@ -1,0 +1,46 @@
+<% include header %>
+
+		<div class="topbalk">
+		  <a href="/">Home</a>
+		  <a href="/">Photos</a>
+		  <a href="/">Trends</a>
+		  <a href="/">Street Style</a>
+			<a href="/">Contact</a>
+
+		</div>
+
+		<nav>
+			Filter:
+		  <% for (var i = 0; i < categorieen.length; i++) { %>
+		<a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+		  <% } %>
+		</nav>
+
+		<div id="slider">
+		  <a href="#" class="control_next">></a>
+		  <a href="#" class="control_prev"><</a>
+		  <ul>
+		    <li><img src="/img/streetstyle1.jpg"></li>
+		    <li><img src="/img/streetstyle2.jpg"></li>
+		    <li><img src="/img/streetstyle3.jpg"></li>
+		    <li><img src="/img/streetstyle4.jpg"></li>
+		  </ul>
+		</div>
+
+<br/>
+
+		  <% var teller = 1; %>
+		  <% nieuws.forEach(function(item){ %>
+		    <section>
+
+		        <h2 class="title">
+		          <a href=/items/<%- item.id %>><%- item.titel %></a>
+		        </h2>
+
+		        <a href=/items/<%- item.id %>><img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>"></a>
+
+		    </section>
+		    <% teller++;}); %>
+
+
+		<% include footer %>
